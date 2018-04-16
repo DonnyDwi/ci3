@@ -1,25 +1,112 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>HELLO! </title>
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marcus Hansen - UX Designer & Front End Developer</title>
+<meta name="description" content="">
+<meta name="author" content="">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="<?php echo base_url(); ?>assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="<?php echo base_url(); ?>assets/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo base_url(); ?>assets/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo base_url(); ?>assets/img/apple-touch-icon-114x114.png">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/fonts/font-awesome/css/font-awesome.css">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="<?php echo base_url(); ?>assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/prettyPhoto.css">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/modernizr.custom.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<div class="btn-default"><h1><b></b></h1></div>
-<BR><BR>
-<body>
-	<div class="jumbotron">
-		<h1>Donny Dwi!</h1>
-	</div>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
+<!-- Header -->
+<header id="header">
+  <div class="intro text-center">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="intro-text">
+            <h1>Donny Dwi Febriyanto</h1>
+            <p></p>
+            <a href="#about" class="btn btn-default btn-lg page-scroll">Pelajari</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Navigation -->
+<div id="nav">
+  <nav class="navbar navbar-custom">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
+      </div>
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="hidden"> <a href="#page-top"></a> </li>
+          <li> <a class="page-scroll" href="#page-top">Beranda</a> </li>
+          <li> <a class="page-scroll" href="#about">Tentang Saya</a> </li>
+          <li> <a class="page-scroll" href="<?php echo base_url(); ?>index.php/blog/">Blog</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- About Section -->
+<div id="about">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>Tentang saya</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6"> <img src="<?php echo base_url(); ?>assets/img/about.jpg" class="img-responsive" alt=""> </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="about-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+          <a href="<?php echo base_url(); ?>index.php/blog/" class="btn btn-primary btn-lg page-scroll">Blog saya</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container text-center">
+    <div class="fnav">
+      <p>Copyright &copy; 2016 Marcus Hansen. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.1.11.1.js"></script> 
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script> 
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/easypiechart.js"></script> 
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.prettyPhoto.js"></script> 
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.counterup.js"></script> 
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/waypoints.js"></script> 
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/contact_me.js"></script> 
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/main.js"></script>
 </body>
 </html>
