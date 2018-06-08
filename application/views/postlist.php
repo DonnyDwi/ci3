@@ -12,22 +12,13 @@
 
 </head>
 <body>
-   <nav class="navbar navbar-default">
-      <div class="container-fluid">
-	<div class="navbar-header">
-		<a class="navbar-brand" href="">Donny</a>
-	</div>
-	<ul class="nav navbar-nav">
-		<li><a href="<?php echo base_url(); ?>">Home</a></li>
-   </div>
-
-
-</nav>
+<?php if($this->session->userdata('logged_in')) { ?>
 <a href="<?php echo base_url('index.php\blog\create'); ?>" class="btn btn-primary">Create Post</a>
+<?php } ?>
 
 <div class="container">
 	<?php foreach ($postlist as $row) { ?>
-		<h1><?php echo $row['judul']; ?></h1><a href="<?php echo base_url('index.php/blog/update/'.$row['id']); ?>">Edit</a>  <a href="<?php echo base_url('index.php/blog/delete/'.$row['id']); ?>">Delete</a><br><br>
+		<h1><?php echo $row['judul']; ?></h1><?php if($this->session->userdata('logged_in')) { ?><a href="<?php echo base_url('index.php/blog/update/'.$row['id']); ?>">Edit</a>  <a href="<?php echo base_url('index.php/blog/delete/'.$row['id']); ?>">Delete</a><?php } ?><br><br>
 		<p><?php echo $row['konten']; ?></p>
 		<br>
 		<br>
