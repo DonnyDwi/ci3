@@ -1,5 +1,7 @@
 <?php
-
+		if(!$this->session->userdata('logged_in') || $this->session->userdata('type') == "biasa") {
+				redirect('user/denied','refresh');
+		}
 ?>
 
 <!DOCTYPE html>

@@ -19,6 +19,8 @@ class User extends CI_Controller {
 		$this->form_validation->set_rules('password', 'Password', 'required');
 		$this->form_validation->set_rules('password2', 'Konfirmasi Password', 
 			'matches[password]');
+		$this->form_validation->set_rules('type', 'Type Member', 
+			'required');
 
 		if($this->form_validation->run() === FALSE){
 			$this->load->view('navbar');
@@ -54,13 +56,15 @@ class User extends CI_Controller {
 
     		// Login user
 			$user_id = $this->user_model->login($username, $password);
+			$type = $this->user_model->getType($username, $password);
 
-			if($user_id){
+			if($user_id && $type){
         		// Buat session
 				$user_data = array(
 					'id_user' => $id_user,
 					'username' => $username,
-					'logged_in' => true
+					'logged_in' => true,
+					'type' => $type,
 				);
 
 				$this->session->set_userdata($user_data);
@@ -87,6 +91,7 @@ class User extends CI_Controller {
         $this->session->unset_userdata('logged_in');
         $this->session->unset_userdata('user_id');
         $this->session->unset_userdata('username');
+        $this->session->unset_userdata('type');
 
         // Set message
         $this->session->set_flashdata('user_loggedout', 'Anda sudah log out');
@@ -94,7 +99,9 @@ class User extends CI_Controller {
         redirect('user/login');
     }
 
-
+    public function denied(){
+    	$this->load->view('akses_ditolak');
+    }
 
 
 

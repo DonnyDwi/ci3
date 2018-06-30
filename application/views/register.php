@@ -47,6 +47,13 @@
  						<label>Konfirmasi Password</label>
  						<input type="password" class="form-control" id="password2" name="password2" placeholder="Input field">
  					</div>
+ 					<div class="form-group">
+ 						<label>Type Member</label>
+ 						<select name="type">
+ 							<option value="premium">Member Premium</option>
+ 							<option value="biasa">Member Biasa</option>
+ 						</select>
+ 					</div>
  					
  					<font color="red"><i>* Wajib diisi</i></font>
 					<br>

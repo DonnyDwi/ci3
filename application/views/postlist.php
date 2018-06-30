@@ -12,13 +12,13 @@
 
 </head>
 <body>
-<?php if($this->session->userdata('logged_in')) { ?>
+<?php if($this->session->userdata('logged_in') && $this->session->userdata('type') != "biasa") { ?>
 <a href="<?php echo base_url('index.php\blog\create'); ?>" class="btn btn-primary">Create Post</a>
 <?php } ?>
 
 <div class="container">
 	<?php foreach ($postlist as $row) { ?>
-		<h1><?php echo $row['judul']; ?></h1><?php if($this->session->userdata('logged_in')) { ?><a href="<?php echo base_url('index.php/blog/update/'.$row['id']); ?>">Edit</a>  <a href="<?php echo base_url('index.php/blog/delete/'.$row['id']); ?>">Delete</a><?php } ?><br><br>
+		<h1><?php echo $row['judul']; ?></h1><?php if($this->session->userdata('logged_in') && $this->session->userdata('type') != "biasa") { ?><a href="<?php echo base_url('index.php/blog/update/'.$row['id']); ?>">Edit</a>  <a href="<?php echo base_url('index.php/blog/delete/'.$row['id']); ?>">Delete</a><?php } ?><br><br>
 		<p><?php echo $row['konten']; ?></p>
 		<br>
 		<br>
